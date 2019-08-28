@@ -1,0 +1,73 @@
+.reveal h1 {
+  font-size: 3.1em;
+}
+
+.reveal {
+  background: white;
+}
+
+.reveal h2 {
+  font-size: 2.0em;
+}
+
+.reveal h3 {
+  font-size: 1.3em;
+}
+
+.reveal blockquote {
+  box-shadow: none;
+  border-left: 5px solid blue;
+}
+
+.reveal img.borderless {
+  border: none;
+  box-shadow: none;
+  background: none
+}
+
+.reveal section[data-background] h1, .reveal section[data-background] h2, .reveal  section[data-background] h3 {
+  color: white;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
+}
+
+.my-shadow {
+  text-shadow:
+  3px 3px 0 #000,
+  -1px -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+}
+/* Custom font for code samples: Fira Code ;-) */
+/* .reveal code {
+  font-family: "Fira Code", "Lato", sans-serif;
+} */
+
+/* Tweak size of text in code blocks */
+.reveal pre {
+  font-size: 0.49em; /* default value: 0.55em */
+  line-height: 1.2em;  /* default value: 1.2em */
+  display: inline-grid;
+}
+
+/* Increase area for code samples */
+.reveal pre code {
+  max-height: 700px;
+}
+
+.reveal .small-font li {
+  font-size: smaller;
+}
+
+.reveal pre code .highlightcode {
+  font-weight: bold;
+}
+
+.dimmed .slide-background {
+  opacity: 0.10 !important;
+}

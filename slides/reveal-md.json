@@ -1,0 +1,5 @@
+{
+    "preprocessor": "preproc.js",
+    "includeDir": "slides",
+    "_": ["slides/index.md"]
+}
