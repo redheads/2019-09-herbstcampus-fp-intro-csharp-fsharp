@@ -5,11 +5,34 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="OptionExtensions.fs" />
+    <Compile Include="ResultExtensions.fs" />
+    <Compile Include="ResultBuilder.fs" />
+    <Compile Include="Util.fs" />
+    <Compile Include="NonEmptyString.fs" />
+    <Compile Include="EmailAddress.fs" />
+    <Compile Include="PositiveNumber.fs" />
+    <Compile Include="GermanZipCode.fs" />
+    <Compile Include="AddressData.fs" />
+    <Compile Include="PostalAddress.fs" />
+    <Compile Include="Domain.fs" />
+    <Compile Include="Contact.fs" />
+    <Compile Include="AddressDataDto.fs" />
+    <Compile Include="ContactMethodDto.fs" />
+    <Compile Include="Filters.fs" />
+    <Compile Include="ContactDto.fs" />
+    <Compile Include="Formatters.fs" />
+    <Compile Include="Printer.fs" />
+    <Compile Include="Persistence.fs" />
+    <Compile Include="StringValidation.fs" />
+    <Compile Include="Workflows.fs" />
+
     <Compile Include="Library.fs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="FSharpPlus" Version="1.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="../ContactsList/ContactsList.fsproj" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="ResultTestHelper.fs" />
     <Compile Include="NonEmptyStringTests.fs" />
@@ -14,20 +15,12 @@
     <Compile Include="WorkflowsTests.fs" />
     <Compile Include="PersistenceTests.fs" />
     <Compile Include="StringValidationTests.fs" />
-
-    <Compile Include="Library.fs" />
   </ItemGroup>
-
   <ItemGroup>
-    <ProjectReference Include="..\FSharpDemos\FSharpDemos.fsproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FSharpPlus" Version="1.0.0" />
-    <PackageReference Include="FsUnit.xUnit" Version="3.4.1" />
-    <PackageReference Include="Unquote" Version="5.0.0" />
+    <PackageReference Include="FsUnit.Xunit" Version="3.4.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.9.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
   </ItemGroup>
-
 </Project>
