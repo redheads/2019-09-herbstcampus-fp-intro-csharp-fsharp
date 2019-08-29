@@ -260,6 +260,9 @@ paket-files/
 __pycache__/
 *.pyc
 
+# VSCode F# Plugin
+.ionide/
+
 # Project specific settings
 **/addressbook.json
 

@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\FSharpDemos\FSharpDemos.fsproj" />
+    <ProjectReference Include="..\FSharpWorkshop\FSharpWorkshop.fsproj" />
   </ItemGroup>
 
   <ItemGroup>
