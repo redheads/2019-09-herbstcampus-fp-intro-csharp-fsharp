@@ -15,7 +15,7 @@ namespace CSharpDemos
 
         public static bool IsValidId(this int i)
             => i > 0;
-        
+
         public static bool IsValidZipcode(this string s)
             => s != null && s.Length >= 3;
     }

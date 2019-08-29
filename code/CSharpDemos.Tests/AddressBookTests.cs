@@ -14,7 +14,7 @@ namespace CSharpDemos.Tests
             var optId = Id.Create(id);
             var optFirstName = NonEmptyString.Create(firstName);
             var optLastName = NonEmptyString.Create(lastName);
-            var optDob = dob != null ? Some(dob.Value) : None;
+            var optDob = dob != null ? Some(new DateOfBirth(dob.Value)) : None;
             var optTwitterHandle = twitter != null ? NonEmptyString.Create(twitter) : None;
 
             var validContact = Contact.CreateValidContact(optId, optFirstName, optLastName, optDob, optTwitterHandle);

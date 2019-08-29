@@ -7,7 +7,7 @@ namespace CSharpDemos
     public class Contact
     {
         private Contact(Id id, NonEmptyString firstName, NonEmptyString lastName, 
-            Option<DateTime> dateOfBirth, Option<NonEmptyString> twitterHandle)
+            Option<DateOfBirth> dateOfBirth, Option<NonEmptyString> twitterHandle)
         {
             Id = id;
             FirstName = firstName;
@@ -16,13 +16,13 @@ namespace CSharpDemos
             TwitterHandle = twitterHandle;
         }
 
-        private static readonly Func<Id, NonEmptyString, NonEmptyString, Option<DateTime>, Option<NonEmptyString>, Contact> Create
+        private static readonly Func<Id, NonEmptyString, NonEmptyString, Option<DateOfBirth>, Option<NonEmptyString>, Contact> Create
             = (id, firstName, lastName, optDob, optTwitter) 
                 => new Contact(id, firstName, lastName, optDob, optTwitter);
 
         // Not sure if this function should be moved somewhere else
         public static Validation<Contact> CreateValidContact(Option<Id> optId, Option<NonEmptyString> optFirstName,
-            Option<NonEmptyString> optLastName, Option<DateTime> optDob,
+            Option<NonEmptyString> optLastName, Option<DateOfBirth> optDob,
             Option<NonEmptyString> optTwitterHandle)
         {
             Validation<Id> ValidateId(Option<Id> opt) 
@@ -51,7 +51,7 @@ namespace CSharpDemos
         public Id Id { get; }
         public NonEmptyString FirstName { get; }
         public NonEmptyString LastName { get; }
-        public Option<DateTime> DateOfBirth { get; }
+        public Option<DateOfBirth> DateOfBirth { get; }
         public Option<NonEmptyString> TwitterHandle { get; }
         
         public override string ToString() => $"Id: {Id}: {FirstName} {LastName} (DOB: {DateOfBirth}, Twitter: {TwitterHandle})";
