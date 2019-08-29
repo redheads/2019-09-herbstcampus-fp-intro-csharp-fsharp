@@ -38,6 +38,10 @@ FILE: value-objects.md
 
 ---
 
+FILE: fortgeschrittene_konzepte.md
+
+---
+
 FILE: funktor.md
 
 ---
@@ -47,6 +51,10 @@ FILE: monade.md
 ---
 
 FILE: railway.md
+
+---
+
+FILE: fortgeschrittene_konzepte_2.md
 
 ---
 

@@ -1,0 +1,1 @@
+## Weitere Konzepte der Funktionalen Programmierung

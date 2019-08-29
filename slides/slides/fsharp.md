@@ -1,3 +1,9 @@
+# Einführung in F# #
+![img](./images/fsharp256.png) <!-- .element: class="borderless" -->
+
+
+----
+
 ## F# #
 - Ursprünglich: Microsoft Forschungsprojekt
 - Heute: Community-driven

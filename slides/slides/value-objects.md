@@ -1,3 +1,7 @@
+# Value Objects
+
+----
+
 ## Value Objects
 
 Warum?
@@ -6,7 +10,7 @@ Warum?
   - Null: NullPointerException, Null-Checks
   - Antipattern: Primitive Obsession
 
----
+----
 
 ### Beispiele
 
@@ -35,11 +39,11 @@ class Kunde {
 }
 ```
 
----
+----
 
 ![img](images/wikipedia-value-objects.png)
 
----
+----
 
 ## Value Objects
 
@@ -47,13 +51,13 @@ class Kunde {
 - immutable
 - equality by structure
 
----
+----
 
 ### Nur gültige Objekte
 
 Es muss bei der Erstellung gewährleistet sein, dass das Objekt gültig ist.
 
----
+----
 
 ### Nur gültige Objekte
 
@@ -81,7 +85,7 @@ class Geld
 }
 ```
 
----
+----
 
 ### Immutability
 
@@ -91,13 +95,13 @@ Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch
 - kein public oder private setter
 - kein parameterloser Konstrukor
 
----
+----
 
 ### Equality by structure
 
 Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 
----
+----
 
 ### Exkurs: Vergleichbarkeit
 
@@ -105,7 +109,7 @@ Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 - Equality by id
 - Equality by structure
 
----
+----
 
 ### Equality by structure
 
@@ -120,4 +124,3 @@ override bool Equals(Geld other)
 
 override int GetHashCode() { /* ... */ }
 ```
-
