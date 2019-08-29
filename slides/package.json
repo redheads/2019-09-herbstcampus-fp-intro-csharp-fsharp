@@ -6,8 +6,8 @@
   "scripts": {
     "demo": "cat demo.md content2.md > final-demo.md && reveal-md final-demo.md -w --template reveal.html",
     "demo-index": "reveal-md slidesdemo/demoindex.md",
-    "start": "reveal-md slides/index.md -w --template reveal.html --highlight-theme foundation",
-    "vortrag": "reveal-md slides/indexvortrag.md -w --template reveal.html --highlight-theme foundation",
+    "start": "cp ./slides/index_workshop.md ./slides/index.md && reveal-md slides/index.md -w --template reveal.html --highlight-theme foundation",
+    "vortrag": "cp ./slides/index_vortrag.md ./slides/index.md && reveal-md slides/index.md -w --template reveal.html --highlight-theme foundation",
     "test": "echo \"Error: no test specified\" && exit 1",
     "pdf": "decktape --chrome-arg=--no-sandbox -s 1920x1080 -p 50 --load-pause 50 reveal http://localhost:1948/index.md#/ pdf/dotnetdayfranken-fp-workshop.pdf"
   },
