@@ -31,5 +31,8 @@ namespace CSharpDemos
             => addressBook.HasContact(contact) 
                 ? addressBook.UpdateContact(contact) 
                 : addressBook.AddContact(contact);
+
+        public static AddressBook RemoveContact(this AddressBook addressBook, Contact contact) 
+            => new AddressBook(addressBook.Contacts.Remove(contact));
     }
 }
