@@ -50,9 +50,3 @@ Diese Notizen erscheinen nur als Speaker Notes (optional)
 <div style="position: absolute; top: 500px; left: 400px">
   <img src="images/redheads-logo.png" class="borderless" style="height: 100px;">
 </div>
-
----
-
-## Vorstellungsrunde
-## &
-## Erwartungen

@@ -95,7 +95,7 @@ Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch
 
 ### Equality by structure
 
-2 Objekte sind gleich, wenn sie die gleichen Werte haben.
+Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 
 ---
 
@@ -109,7 +109,7 @@ Damit ein C# Objekt unveränderlich wird, muss gewährleistet sein, dass es auch
 
 ### Equality by structure
 
-2 Objekte sind gleich, wenn sie die gleichen Werte haben.
+Zwei Objekte sind gleich, wenn sie die gleichen Werte haben.
 
 - `Equals` und `GetHashcode` überschreiben
 

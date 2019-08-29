@@ -49,7 +49,7 @@
 
 ### LaYumba
 
-alle C# Beispiele haben...
+alle C# Beispiele haben implizit...
 
 ```csharp
 using LaYumba.Functional;           // <- lib

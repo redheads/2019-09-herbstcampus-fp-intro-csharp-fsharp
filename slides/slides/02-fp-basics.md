@@ -166,4 +166,3 @@ Wie kann man mit diesem "Purismus" Software schreiben, die etwas tut?
 
 - Gängige Vorgehensweise: Kleine Funktionen werden zu immer größeren Funktionalitäten zusammengesteckt
 - Problem: Nicht alle Funktionen passen gut zusammen
-- Zu Lösungsmöglichkeiten dafür kommen wir später noch

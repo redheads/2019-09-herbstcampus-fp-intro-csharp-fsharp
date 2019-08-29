@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css" integrity="sha384-9eLZqc9ds8eNjO3TmqPeYcDj8n+Qfa4nuSiGYa6DjLNcv9BtN69ZIulL9+8CqC9Y" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+        <link href="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.css" rel="stylesheet" type="text/css">
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        
+        <script src="https://cdn.jsdelivr.net/npm/katex-copytex@latest/dist/katex-copytex.min.js"></script>
+    </head>
+    <body>
+        <ol>
+<li>
+<p>Begrüßung</p>
+</li>
+<li>
+<p>Vorstellung wir</p>
+</li>
+<li>
+<p>Vorstellungsrunde Teilnehmer</p>
+</li>
+<li>
+<p>Erwartungen Teilnehmer</p>
+</li>
+<li>
+<p>Inhalte/Lernziele Workshop</p>
+</li>
+<li>
+<p>Was ist Mob-Programming?</p>
+</li>
+<li>
+<p>Vorstellung Aufgabenstellung/Domäne</p>
+</li>
+<li>
+<p>Naive Implementierung des Datenmodells für einen Kontakt (string, DateTime?, int)</p>
+</li>
+<li>
+<p>FP Basics</p>
+</li>
+<li>
+<p>PO will Nullable loswerden für Verständlichkeit</p>
+</li>
+<li>
+<p>Zurück zum Modell: Fokus auf Geburtsdatum</p>
+<ul>
+<li>DateTime? ganz gut, weil schon &quot;da oder nicht drin steckt&quot;, aber wäre es nicht schöner, ohne ständige Null-Checks und auch für Domänenexperten verständlich ausdrücken zu können?</li>
+</ul>
+</li>
+<li>
+<p>Vorstellung von Option</p>
+<ul>
+<li>Semantik für &quot;vorhanden oder nicht&quot;</li>
+</ul>
+</li>
+<li>
+<p>PD: LaYumba vorstellen</p>
+</li>
+<li>
+<p>MG: PO will neue Funktion haben: Das Datum muss als String ausgebbar sein, egal ob es da ist oder nicht</p>
+</li>
+<li>
+<p>Funktion schreiben mit Pattern Matching: DateTime option -&gt; string (String.Empty falls None)</p>
+</li>
+<li>
+<p>MG: Einführung F#</p>
+</li>
+<li>
+<p>MG: Bisheriges Datenmodell in F# modellieren</p>
+</li>
+<li>
+<p>Neue Anforderung: Vorname darf niemals leer sein</p>
+</li>
+<li>
+<p>PD: Value Objects</p>
+</li>
+<li>
+<p>PD: ValueObject erstmal mit Konstruktor und Exception, wenn was schief geht</p>
+</li>
+<li>
+<p>Datenmodell anpassen</p>
+</li>
+<li>
+<p>MG: Neue Anforderung: Das Datum darf nur eine Datumskomponente enthalten, keine Zeitkomponente</p>
+</li>
+<li>
+<p>Problem: Wir haben keine Funktion zur Verfügung, die mit Option<DateTime> umgehen kann</p>
+</li>
+<li>
+<p>MG: Einführung Funktor</p>
+</li>
+<li>
+<p>Funktion implementieren und mit map verbinden</p>
+</li>
+<li>
+<p>Funktionen für DateTime option -&gt; string und für map auch implementieren</p>
+</li>
+<li>
+<p>MG: Nächste Anforderung: Ein Kontakt kann gespeichert werden, und nach erfolgreichem Speichern wird eine Benachrichtigung verschickt</p>
+</li>
+<li>
+<p>Speichern kann fehlschlagen: Wie drücken wir aus, dass es klappen oder fehlschlagen kann?</p>
+</li>
+<li>
+<p>Ergebnis ist entweder ein Erfolg oder ein Fehlschlag -&gt; Result</p>
+</li>
+<li>
+<p>Result (Either) vorstellen</p>
+</li>
+<li>
+<p>Monade einführen</p>
+</li>
+<li>
+<p>PD: Railway Oriented Programming vorstellen</p>
+</li>
+<li>
+<p>Ausprogrammieren: Kontakt kann gespeichert werden, und nach erfolgreichem Speichern wird eine Benachrichtigung verschickt</p>
+</li>
+<li>
+<p>MG: Neue Anforderung: Rückgabe für den User notwendig: Funktion, die auf Result am Ende der Kette pattern matching macht und jeweils Strings ausgibt</p>
+</li>
+<li>
+<p>Verweis auf Railway Oriented Programming -&gt; &quot;Endfunktion&quot;</p>
+</li>
+<li>
+<p>Endfunktion mit Pattern Matching implementieren</p>
+</li>
+<li>
+<p>MG: Neue Anforderung: Fehler beim Erzeugen eines Kontakts (Validierung) sollen gesammelt werden, nicht beim Ersten abgebrochen wie beim Speichern</p>
+</li>
+<li>
+<p>Applicative einführen</p>
+</li>
+<li>
+<p>Ausprogrammieren: Fehler beim Erzeugen eines Kontakts (Validierung) sollen gesammelt werden, nicht beim Ersten abgebrochen wie beim Speichern</p>
+</li>
+<li>
+<p>Hinweise auf Veranstaltungen zum Thema</p>
+</li>
+<li>
+<p>MG: Exkurs: How to introduce F# into YOUR project</p>
+</li>
+<li>
+<p>Zusammenfassung des Gelernten (durch Teilnehmer?)</p>
+</li>
+<li>
+<p>Falls noch Zeit ist: Einfach am Projekt weiterprogrammieren und die Konzepte anwenden/vertiefen bzw. siehe BONUS</p>
+</li>
+<li>
+<p>Abschluss-Folien</p>
+</li>
+<li>
+<p>Feedbackrunde</p>
+</li>
+<li>
+<p>BONUS</p>
+<ol>
+<li>Smart Constructor</li>
+<li>MG: Intermezzo: Funktionale Architektur(en)</li>
+<li>MG: Datenmodell in F# erweitern auf Kontaktmethode</li>
+<li>MG: Wiederholung Discriminated Unions (eingeführt schon im F# Basics Teil)</li>
+<li>PD: Wie kann man das in C# nachbilden? Nicht ohne zusätzliche Bibliothek</li>
+</ol>
+</li>
+</ol>
+
+    </body>
+    </html>

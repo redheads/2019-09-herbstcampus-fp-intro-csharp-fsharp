@@ -121,7 +121,7 @@ type ShoppingCart = {
     createdAt: System.DateTime
 }
 
-// Typ muss bei Erzeugung normalerweise nicht angegeben werden - außer wenn er nicht eindeutig ist
+// Typ muss nur angegeben werden wenn er nicht eindeutig ist
 let shoppingCart = {
     products = []
     total = 42.42
