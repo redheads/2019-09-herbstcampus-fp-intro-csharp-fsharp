@@ -1,5 +1,5 @@
 {
-  "name": "dotnetdayfranken-fp-workshop",
+  "name": "herbstcampus2019-fp-workshop",
   "version": "1.0.0",
   "description": "slides for functional programming workshop",
   "main": "reveal.html",
@@ -9,7 +9,7 @@
     "start": "cp ./slides/index_workshop.md ./slides/index.md && reveal-md slides/index.md -w --template reveal.html --highlight-theme foundation",
     "vortrag": "cp ./slides/index_vortrag.md ./slides/index.md && reveal-md slides/index.md -w --template reveal.html --highlight-theme foundation",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pdf": "decktape --chrome-arg=--no-sandbox -s 1920x1080 -p 50 --load-pause 50 reveal http://localhost:1948/index.md#/ pdf/dotnetdayfranken-fp-workshop.pdf"
+    "pdf": "decktape --chrome-arg=--no-sandbox -s 1920x1080 -p 50 --load-pause 50 reveal http://localhost:1948/index.md#/ pdf/herbstcampus2019-fp-workshop.pdf"
   },
   "keywords": [
     "Functional Programming",
