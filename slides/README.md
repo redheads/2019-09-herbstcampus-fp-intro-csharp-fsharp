@@ -11,12 +11,20 @@
 
 ## Starting the slide show
 
+### Starting the workshop presentation
+
 - `npm start`
+
+### Starting the 'normal' presentation
+
+- `npm run vortrag`
 
 ## Exporting PDF from slide show
 
-- start the slide show (must be active!): `npm start &`
-- `npm run pdf`
+- start the slide show (must be active!): `npm start`
+- in a different shell: `npm run pdf`
+
+(adapt for `vortrag` version accordingly: `npm run vortrag` and `npm run pdf-vortrag`)
 
 On Arch Linux the `decktape` command requires the CLI option `--chrome-arg=--no-sandbox` (for details see "Errors - No usable sandbox!" section in https://github.com/astefanutti/decktape)
 
