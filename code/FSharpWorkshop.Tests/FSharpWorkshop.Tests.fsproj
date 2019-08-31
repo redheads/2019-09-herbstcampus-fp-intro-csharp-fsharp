@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Compile Include="Library.fs" />
+    <Compile Include="Helpers.fs" />
+    <Compile Include="NonEmptyStringTests.fs" />
   </ItemGroup>
 
   <ItemGroup>

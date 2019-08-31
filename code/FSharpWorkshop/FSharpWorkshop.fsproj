@@ -6,6 +6,12 @@
 
   <ItemGroup>
     <Compile Include="Library.fs" />
+    <Compile Include="Logging.fs" />
+    <Compile Include="NonEmptyString.fs" />
+    <Compile Include="Persistence.fs" />
+    <Compile Include="Contact.fs" />
+    <Compile Include="Notify.fs" />
+    <Compile Include="Workflows.fs" />
   </ItemGroup>
 
   <ItemGroup>
