@@ -71,3 +71,8 @@
 .dimmed .slide-background {
   opacity: 0.10 !important;
 }
+
+.reveal pre code .hljs-comment {
+  color: blueviolet;
+  background-color: lightcyan;
+}
