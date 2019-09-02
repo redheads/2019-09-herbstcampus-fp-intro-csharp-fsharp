@@ -12,6 +12,7 @@ namespace CSharpDemos.Tests
             return new NonEmptyStringAssertions(instance);
         }
     }
+    
     public class NonEmptyStringAssertions
         : ReferenceTypeAssertions<Option<NonEmptyString>, NonEmptyStringAssertions>
     {
