@@ -1,8 +1,9 @@
 using System;
+using CSharpDemos.ValueObjects;
 using FluentAssertions;
 using Xunit;
 
-namespace CSharpDemos.Tests
+namespace CSharpDemos.Tests.ValueObjects
 {
     public class DateOfBirthTests
     {
