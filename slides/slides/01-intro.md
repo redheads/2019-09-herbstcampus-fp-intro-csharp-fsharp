@@ -5,6 +5,10 @@
 <p style="position: absolute; top: 470px; right: -145px; color: #ccc; text-transform: none; text-align: right" class="my-shadow">@mobilgroma</p>
 <p style="position: absolute; top: 520px; right: -145px; color: #ccc; text-transform: none; text-align: right" class="my-shadow">@drechsler<br/>Redheads Ltd.</p>
 
+
+<img src="/images/herbstcampus.svg" class="borderless" style="position: relative; top: 550px; left: -450px; height: 50px">
+
+
 Note:
 Diese Notizen erscheinen nur als Speaker Notes (optional)
 
