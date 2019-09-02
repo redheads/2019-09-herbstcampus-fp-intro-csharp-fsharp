@@ -32,11 +32,12 @@ namespace CSharpDemos.Tests
             var marge = CreateSampleContact(2, "Marge", "Simpson");
             
             // Act
-            var addressBook1 = emptyAddressBook.AddOrUpdateContact(homer);
-            var addressBook2 = addressBook1.AddOrUpdateContact(marge);
+            var addressBook = emptyAddressBook
+                .AddOrUpdateContact(homer)
+                .AddOrUpdateContact(marge);
             
             // Assert
-            addressBook2.Contacts.Should().HaveCount(emptyAddressBook.Contacts.Count + 2);
+            addressBook.Contacts.Should().HaveCount(emptyAddressBook.Contacts.Count + 2);
         }
 
         [Fact]
@@ -49,12 +50,13 @@ namespace CSharpDemos.Tests
             var homerWithTwitter = CreateSampleContact(1, "Homer", "Simpson", null, "@homer");
             
             // Act
-            var addressBook1 = emptyAddressBook.AddOrUpdateContact(homer);
-            var addressBook2 = addressBook1.AddOrUpdateContact(homerWithTwitter);
+            var addressBook = emptyAddressBook
+                .AddOrUpdateContact(homer)
+                .AddOrUpdateContact(homerWithTwitter);
             
             // Assert
-            addressBook2.Contacts.Should().HaveCount(emptyAddressBook.Contacts.Count + 1);
-            var contact = addressBook2.Contacts.First();
+            addressBook.Contacts.Should().HaveCount(emptyAddressBook.Contacts.Count + 1);
+            var contact = addressBook.Contacts.First();
             contact.Id.Value.Should().Be(1);
             contact.TwitterHandle.ToString().Should().Be("Some(@homer)");
         }
@@ -67,15 +69,16 @@ namespace CSharpDemos.Tests
             
             var homer = CreateSampleContact(1, "Homer", "Simpson");
             var marge = CreateSampleContact(2, "Marge", "Simpson");
-            var addressBook1 = emptyAddressBook.AddOrUpdateContact(homer);
-            var addressBook2 = addressBook1.AddOrUpdateContact(marge);
+            var addressBook = emptyAddressBook
+                .AddOrUpdateContact(homer)
+                .AddOrUpdateContact(marge);
             
             // Act
-            var addressBook3 = addressBook2.RemoveContact(homer);
+            var addressBook2 = addressBook.RemoveContact(homer);
             
             // Assert
-            addressBook3.Contacts.Should().HaveCount(1);
-            addressBook3.Contacts.First().Id.Value.Should().Be(2);
+            addressBook2.Contacts.Should().HaveCount(1);
+            addressBook2.Contacts.First().Id.Value.Should().Be(2);
         }
 //
 //        [Fact]
