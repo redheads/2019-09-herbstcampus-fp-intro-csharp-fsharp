@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Immutable;
 using System.Linq;
+using CSharpDemos.ValueObjects;
 using FluentAssertions;
 using LaYumba.Functional;
 using Xunit;
