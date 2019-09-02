@@ -20,8 +20,7 @@ namespace CSharpDemos.Tests
             Func<Contact, Either<string, Contact>> sendMailFunction = c => Right(homer);
 
             // Act
-            var result = Right(emptyAddressBook)
-                .Bind(x => x.AddWorkflow(sendMailFunction, homer));
+            var result = emptyAddressBook.AddWorkflow(sendMailFunction, homer);
 
             // Assert
             result.Should().HaveNoErrors();
@@ -37,8 +36,7 @@ namespace CSharpDemos.Tests
             Func<Contact, Either<string, Contact>> sendMailFunction = c => Left("ups");
 
             // Act
-            var result = Right(emptyAddressBook)
-                .Bind(x => x.AddWorkflow(sendMailFunction, homer));
+            var result = emptyAddressBook.AddWorkflow(sendMailFunction, homer);
 
             // Assert
             result.Should().HaveErrorMessage("ups");
