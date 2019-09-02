@@ -30,6 +30,11 @@ namespace CSharpDemos
                     () => Error("invalid Id"), 
                     x => Valid(x));
 
+//            Func<Option<Id>, Validation<Id>> ValidateId2 
+//                = opt => opt.Match(
+//                    () => Error("invalid Id"), 
+//                    x => Valid(x));
+
             Validation<NonEmptyString> ValidateFirstName(Option<NonEmptyString> opt) 
                 => opt.Match(
                     () => Error("invalid FirstName"), 

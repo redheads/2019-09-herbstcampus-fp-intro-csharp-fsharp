@@ -2,6 +2,7 @@ using System;
 using System.Collections.Immutable;
 using System.Linq;
 using FluentAssertions;
+using LaYumba.Functional;
 using Xunit;
 using static LaYumba.Functional.F;
 
@@ -75,6 +76,31 @@ namespace CSharpDemos.Tests
             // Assert
             addressBook3.Contacts.Should().HaveCount(1);
             addressBook3.Contacts.First().Id.Value.Should().Be(2);
+        }
+//
+//        [Fact]
+//        public void Foo()
+//        {
+//            var emptyAddressBook = new AddressBook(ImmutableList<Contact>.Empty);
+//            var homer = CreateSampleContact(1, "Homer", "Simpson");
+//
+////            var result = Right(emptyAddressBook)
+////                .Bind(x => AddressBookFunctional.AddOrUpdateContact(x, homer))
+////                .Bind(x => AddressBookFunctional.SendConfirmationMail(new Mailer(), homer, x));
+//
+//            Func<Contact, Either<string, Contact>> mailer = c => Right(c);
+//            
+//            var result = Right(emptyAddressBook)
+//                .Bind(x => AddressBookFunctional.AddOrUpdateContact(x, homer))
+//                .Bind(x => AddressBookFunctional.SendConfirmationMail2(mailer, homer, x));
+//        }
+
+        private class Mailer : IMailer
+        {
+            public Either<string, Contact> Send(Contact contact)
+            {
+                return Right(contact);
+            }
         }
     }
 }
