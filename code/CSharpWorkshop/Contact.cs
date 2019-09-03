@@ -15,6 +15,10 @@ namespace CSharpDemos
             DateTime? dateOfBirth,
             string twitterHandle)
         {
+            if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
+            {
+                throw new Exception();
+            }
             this.LastName = lastName;
             this.FirstName = firstName;
             this.DateOfBirth = dateOfBirth;
