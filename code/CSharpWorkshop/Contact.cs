@@ -38,7 +38,12 @@ namespace CSharpDemos
         }
 
         private DateTime StripTime(DateTime dateTime) => dateTime.Date;
-        
-        
+
+        private Either<string, Contact> Save(Contact contact) => Left("Dienstag");
+        private Either<string, Contact> SendEmail(Contact contact) => Left("Mittwoch");
+
+        public Either<string, Contact> SaveAndSendEmail(Contact contact)
+            => Save(contact)
+                .Bind(SendEmail);
     }
 }
