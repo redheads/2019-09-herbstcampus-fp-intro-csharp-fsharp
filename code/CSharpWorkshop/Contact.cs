@@ -26,7 +26,11 @@ namespace CSharpDemos
         }
         public string Stringify()
         {
-            return this.LastName + ", " + this.FirstName;
+            string output = LastName + ", " + FirstName;
+            if (DateOfBirth.HasValue)
+                output += ", " + DateOfBirth;
+
+            return output;
         }
     }
 }
