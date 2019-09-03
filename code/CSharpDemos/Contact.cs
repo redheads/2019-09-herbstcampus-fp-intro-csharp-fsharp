@@ -17,7 +17,8 @@ namespace CSharpDemos
             TwitterHandle = twitterHandle;
         }
 
-        private static readonly Func<Id, NonEmptyString, NonEmptyString, Option<DateOfBirth>, Option<NonEmptyString>, Contact> Create
+        private static readonly Func<Id, NonEmptyString, NonEmptyString, Option<DateOfBirth>, Option<NonEmptyString>, Contact> 
+            Create
             = (id, firstName, lastName, optDob, optTwitter) 
                 => new Contact(id, firstName, lastName, optDob, optTwitter);
 

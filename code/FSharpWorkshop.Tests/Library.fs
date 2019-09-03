@@ -1,10 +1,9 @@
-﻿
-module Dummy
+﻿module Dummy
 
 open Xunit
-open FSharpDemos.Say
+open FSharpDemos.Contact
 open Swensen.Unquote
 
 [<Fact>]
-let ``Adding one works`` () =
-    test <@ addOne 1 = 2 @>
+let ``The banana is real`` () =
+    test <@ banana = "BANANA" @>

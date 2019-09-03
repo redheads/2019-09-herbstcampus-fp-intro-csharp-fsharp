@@ -8,7 +8,9 @@ let homer =
              (Contact.create
               <| System.Guid.Parse("bba52030-19ce-4c02-b1dd-792b0120855b")))
         <*> (NonEmptyString.create "Homer")
-        <*> (NonEmptyString.create "Simpson") <*> (lift None) <*> (lift None)
+        <*> (NonEmptyString.create "Simpson")
+        <*> (lift None) 
+        <*> (lift None)
         <*> (Result.map Email
                  (Result.bind EmailAddress.create
                       (NonEmptyString.create "a@b.c")))
