@@ -1,4 +1,5 @@
 ﻿using System;
+using LaYumba.Functional;
 
 namespace CSharpDemos
 {
@@ -6,13 +7,13 @@ namespace CSharpDemos
     {
         public string FirstName { get; }
         public string LastName { get; }
-        public DateTime? DateOfBirth { get; }
+        public Option<DateTime> DateOfBirth { get; }
         public string TwitterHandle { get; }
 
         public Contact(
             string firstName,
             string lastName,
-            DateTime? dateOfBirth,
+            Option<DateTime> dateOfBirth,
             string twitterHandle)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName))
@@ -27,10 +28,10 @@ namespace CSharpDemos
         public string Stringify()
         {
             string output = LastName + ", " + FirstName;
-            if (DateOfBirth.HasValue)
-                output += ", " + DateOfBirth;
-
-            return output;
+            return DateOfBirth.Match(
+                () => output,
+                x => output + ", " + x.ToString("yyyy-MM-dd")
+            );
         }
     }
 }
