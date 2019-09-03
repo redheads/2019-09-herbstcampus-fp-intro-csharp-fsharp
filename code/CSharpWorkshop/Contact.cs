@@ -1,5 +1,6 @@
 ﻿using System;
 using LaYumba.Functional;
+using static LaYumba.Functional.F;
 
 namespace CSharpDemos
 {
@@ -23,7 +24,7 @@ namespace CSharpDemos
 
             this.LastName = lastName;
             this.FirstName = firstName;
-            this.DateOfBirth = dateOfBirth.Map(StripTime).Map(StripTime2);
+            this.DateOfBirth = dateOfBirth.Map(StripTime);
             this.TwitterHandle = twitterHandle;
         }
 
@@ -37,6 +38,7 @@ namespace CSharpDemos
         }
 
         private DateTime StripTime(DateTime dateTime) => dateTime.Date;
-        private DateTime StripTime2(DateTime dateTime) => dateTime.AddDays(1);
+        
+        
     }
 }
