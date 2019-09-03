@@ -20,11 +20,13 @@ namespace CSharpDemos
             {
                 throw new Exception();
             }
+
             this.LastName = lastName;
             this.FirstName = firstName;
-            this.DateOfBirth = dateOfBirth;
+            this.DateOfBirth = dateOfBirth.Map(StripTime).Map(StripTime2);
             this.TwitterHandle = twitterHandle;
         }
+
         public string Stringify()
         {
             string output = LastName + ", " + FirstName;
@@ -33,5 +35,8 @@ namespace CSharpDemos
                 x => output + ", " + x.ToString("yyyy-MM-dd")
             );
         }
+
+        private DateTime StripTime(DateTime dateTime) => dateTime.Date;
+        private DateTime StripTime2(DateTime dateTime) => dateTime.AddDays(1);
     }
 }
