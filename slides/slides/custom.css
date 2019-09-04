@@ -44,9 +44,9 @@
   1px 1px 0 #000;
 }
 /* Custom font for code samples: Fira Code ;-) */
-/* .reveal code {
+.reveal code {
   font-family: "Fira Code", "Lato", sans-serif;
-} */
+}
 
 /* Tweak size of text in code blocks */
 .reveal pre {
