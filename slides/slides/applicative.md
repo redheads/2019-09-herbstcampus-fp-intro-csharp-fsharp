@@ -91,5 +91,4 @@ AddNumbers(-1, -2, -3); // --> [
                         // Error("Number -2 is not positive"),
                         // Error("Number -3 is not positive")
                         // ]
-
 ```
