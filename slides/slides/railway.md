@@ -63,12 +63,12 @@ Problem: Keine standardisierte Strategie für Fehlerbehandlung
 #### Result/Either
 
 - kann entweder 
-  - das Ergebniss beinhalten, oder 
+  - das Ergebnis beinhalten, oder 
   - einen Fehlerfall
 
 ----
 
-- In Railway-Sprech bedeutet dass, dass man "2-gleissig" fährt:
+- In Railway-Sprech bedeutet dass, dass man "2-gleisig" fährt:
 
 - Jede **Funktion** bekommt eine Eingabe, und 
   - hat "im Bauch" eine Weiche, die entscheidet ob 
